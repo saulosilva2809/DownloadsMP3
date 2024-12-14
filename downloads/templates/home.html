@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Bem-vindo!</h1>
+        <p class="lead">Bem vindo ao Downloads MP3.</p>
+        <hr class="my-4">
+        <p>Clique aqui para fazer um download.</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'baixar_musica' %}" role="button">Baixar Música</a>
+    </div>
+{% endblock %}

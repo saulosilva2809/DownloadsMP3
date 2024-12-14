@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Baixar Música{% endblock %}
+
+{% block content %}
+    <h1>Baixar Música</h1>
+    <form method="post" action="{% url 'baixar_musica' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="url">Nome do arquivo</label>
+            {{ form.nome_arquivo }}
+            <br>
+            <label for="url">URL do Vídeo</label>
+            {{ form.url }}
+        </div>
+        <button type="submit" class="btn btn-primary">Baixar</button>
+    </form>
+{% endblock %}
